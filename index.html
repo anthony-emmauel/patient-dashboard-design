@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HealthCare Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top bar -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="brand">
+          <div class="brand-icon">💊</div>
+          <span class="brand-name">HealthCare Portal</span>
+        </a>
+
+        <div class="header-right">
+          <button class="icon-btn" aria-label="Notifications">🔔</button>
+          <button class="icon-btn" aria-label="Settings">⚙️</button>
+
+          <div class="user-info">
+            <div class="user-meta">
+              <span class="user-name">Sarah Johnson</span>
+              <span class="user-id">Patient ID: P-2845</span>
+            </div>
+            <div class="avatar">
+              <span>SJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="container page-heading">
+        <div>
+          <h1>Welcome back, Sarah</h1>
+          <p class="text-muted">
+            Here’s an overview of your health information
+          </p>
+        </div>
+      </section>
+
+      <!-- Top grid: Appointments + Prescriptions -->
+      <section class="container top-grid">
+        <!-- Appointments -->
+        <section class="card">
+          <header class="card-header">
+            <h2>Appointments</h2>
+          </header>
+
+          <div class="tabs">
+            <button class="tab active">Upcoming</button>
+            <button class="tab">Past</button>
+          </div>
+
+          <div class="appointments">
+            <!-- Appt 1 -->
+            <article class="appointment-card">
+              <div class="appointment-header">
+                <div>
+                  <h3>Dr. Emily Chen</h3>
+                  <p class="text-muted small">Cardiologist</p>
+                </div>
+                <span class="badge badge-confirmed">confirmed</span>
+              </div>
+              <div class="appointment-meta">
+                <div class="meta-row">
+                  <span class="meta-icon">📅</span>
+                  <span>Oct 12, 2025</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">⏰</span>
+                  <span>10:00 AM</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">📍</span>
+                  <span>Building A, Room 204</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Appt 2 -->
+            <article class="appointment-card">
+              <div class="appointment-header">
+                <div>
+                  <h3>Dr. Michael Brown</h3>
+                  <p class="text-muted small">General Physician</p>
+                </div>
+                <span class="badge badge-confirmed">confirmed</span>
+              </div>
+              <div class="appointment-meta">
+                <div class="meta-row">
+                  <span class="meta-icon">📅</span>
+                  <span>Oct 15, 2025</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">⏰</span>
+                  <span>2:30 PM</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">💻</span>
+                  <span>Online</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Appt 3 -->
+            <article class="appointment-card">
+              <div class="appointment-header">
+                <div>
+                  <h3>Dr. Lisa Anderson</h3>
+                  <p class="text-muted small">Dermatologist</p>
+                </div>
+                <span class="badge badge-pending">pending</span>
+              </div>
+              <div class="appointment-meta">
+                <div class="meta-row">
+                  <span class="meta-icon">📅</span>
+                  <span>Oct 20, 2025</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">⏰</span>
+                  <span>11:15 AM</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-icon">📍</span>
+                  <span>Building B, Room 102</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Prescriptions -->
+        <section class="card">
+          <header class="card-header">
+            <h2>Current Prescriptions</h2>
+          </header>
+
+          <div class="prescriptions-grid">
+            <!-- Rx 1 -->
+            <article class="prescription-card">
+              <div class="prescription-header">
+                <div class="pill-icon">💊</div>
+                <div class="prescription-title">
+                  <h3>Lisinopril</h3>
+                  <p class="small text-muted">10mg</p>
+                </div>
+                <span class="badge badge-active">active</span>
+              </div>
+              <div class="prescription-body">
+                <p><span class="label">Frequency:</span> Once daily</p>
+                <p>
+                  <span class="label">Prescribed by:</span>
+                  Dr. Emily Chen
+                </p>
+                <p>
+                  <span class="label">Started:</span>
+                  Sep 15, 2025
+                </p>
+                <p class="text-muted small">2 refills remaining</p>
+              </div>
+            </article>
+
+            <!-- Rx 2 -->
+            <article class="prescription-card">
+              <div class="prescription-header">
+                <div class="pill-icon">💊</div>
+                <div class="prescription-title">
+                  <h3>Metformin</h3>
+                  <p class="small text-muted">500mg</p>
+                </div>
+                <span class="badge badge-active">active</span>
+              </div>
+              <div class="prescription-body">
+                <p>
+                  <span class="label">Frequency:</span>
+                  Twice daily with meals
+                </p>
+                <p>
+                  <span class="label">Prescribed by:</span>
+                  Dr. Michael Brown
+                </p>
+                <p>
+                  <span class="label">Started:</span>
+                  Aug 22, 2025
+                </p>
+                <p class="text-muted small">1 refill remaining</p>
+              </div>
+            </article>
+
+            <!-- Rx 3 - needs refill -->
+            <article class="prescription-card warning">
+              <div class="prescription-header">
+                <div class="pill-icon">💊</div>
+                <div class="prescription-title">
+                  <h3>Vitamin D3</h3>
+                  <p class="small text-muted">2000 IU</p>
+                </div>
+                <span class="badge badge-refill">refill needed</span>
+              </div>
+              <div class="prescription-body">
+                <p><span class="label">Frequency:</span> Once daily</p>
+                <p>
+                  <span class="label">Prescribed by:</span>
+                  Dr. Michael Brown
+                </p>
+                <p>
+                  <span class="label">Last filled:</span>
+                  Jul 10, 2025
+                </p>
+                <div class="refill-alert">
+                  <span class="meta-icon">⚠️</span>
+                  <span>Refill needed</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Rx 4 -->
+            <article class="prescription-card">
+              <div class="prescription-header">
+                <div class="pill-icon">💊</div>
+                <div class="prescription-title">
+                  <h3>Aspirin</h3>
+                  <p class="small text-muted">81mg</p>
+                </div>
+                <span class="badge badge-active">active</span>
+              </div>
+              <div class="prescription-body">
+                <p><span class="label">Frequency:</span> Once daily</p>
+                <p>
+                  <span class="label">Prescribed by:</span>
+                  Dr. Emily Chen
+                </p>
+                <p>
+                  <span class="label">Started:</span>
+                  Jun 05, 2025
+                </p>
+                <p class="text-muted small">3 refills remaining</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- Medical History -->
+      <section class="container">
+        <section class="card history-card">
+          <header class="card-header">
+            <h2>Medical History</h2>
+          </header>
+
+          <div class="table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Provider</th>
+                  <th>Diagnosis</th>
+                  <th>Treatment</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sep 28, 2025</td>
+                  <td>Consultation</td>
+                  <td>Dr. Robert Davis</td>
+                  <td>Knee Pain - Arthritis</td>
+                  <td>Physical therapy recommended</td>
+                  <td><span class="badge badge-completed">completed</span></td>
+                </tr>
+                <tr>
+                  <td>Sep 15, 2025</td>
+                  <td>Follow-up</td>
+                  <td>Dr. Emily Chen</td>
+                  <td>Hypertension Management</td>
+                  <td>Medication adjusted</td>
+                  <td><span class="badge badge-completed">completed</span></td>
+                </tr>
+                <tr>
+                  <td>Aug 22, 2025</td>
+                  <td>Lab Test</td>
+                  <td>HealthCare Lab</td>
+                  <td>Blood Sugar Test</td>
+                  <td>Results: Normal range</td>
+                  <td><span class="badge badge-completed">completed</span></td>
+                </tr>
+                <tr>
+                  <td>Jul 10, 2025</td>
+                  <td>Annual Checkup</td>
+                  <td>Dr. Michael Brown</td>
+                  <td>General Health Assessment</td>
+                  <td>Vitamin D supplement prescribed</td>
+                  <td><span class="badge badge-completed">completed</span></td>
+                </tr>
+                <tr>
+                  <td>Jun 05, 2025</td>
+                  <td>Consultation</td>
+                  <td>Dr. Emily Chen</td>
+                  <td>Cardiovascular Assessment</td>
+                  <td>Low-dose aspirin prescribed</td>
+                  <td><span class="badge badge-completed">completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

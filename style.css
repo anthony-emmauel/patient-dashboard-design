@@ -1,0 +1,446 @@
+:root {
+  /* colors */
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-soft: #f9fafb;
+  --border: #e5e7eb;
+  --border-soft: #dde1ea;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --accent: #2563eb;
+  --accent-soft: #e0edff;
+  --accent-dark: #1d4ed8;
+  --warning-soft: #fee2e2;
+  --warning: #dc2626;
+  --badge-confirmed: #dbeafe;
+  --badge-pending: #fef3c7;
+
+  /* spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* radius + shadows */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 0.6rem 2rem rgba(15, 23, 42, 0.06);
+
+  /* font */
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--text-main);
+  background: var(--bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* header */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-sm);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand-icon {
+  padding: 0.4rem;
+  border-radius: 0.75rem;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.user-id {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.avatar {
+  width: 2.4rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #111827;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* page heading */
+
+.page {
+  padding-block: var(--space-lg);
+}
+
+.page-heading {
+  margin-bottom: var(--space-md);
+}
+
+.page-heading h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+/* cards & layout */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(209, 213, 219, 0.6);
+}
+
+.card-header {
+  margin-bottom: var(--space-sm);
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* tabs */
+
+.tabs {
+  display: inline-flex;
+  margin-bottom: var(--space-md);
+  padding: 0.2rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.tab {
+  border: none;
+  background: transparent;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: var(--accent-dark);
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4);
+}
+
+/* appointments */
+
+.appointments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.appointment-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  padding: var(--space-sm);
+  background: #ffffff;
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.appointment-header h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.appointment-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.meta-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.meta-icon {
+  font-size: 0.9rem;
+}
+
+/* badges */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-confirmed {
+  background: var(--badge-confirmed);
+  color: #1d4ed8;
+}
+
+.badge-pending {
+  background: var(--badge-pending);
+  color: #92400e;
+}
+
+.badge-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge-refill {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.badge-completed {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* prescriptions */
+
+.prescriptions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.prescription-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  padding: var(--space-sm);
+  background: #ffffff;
+}
+
+.prescription-card.warning {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.prescription-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.pill-icon {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 0.75rem;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.prescription-title h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.prescription-body {
+  font-size: 0.8rem;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.refill-alert {
+  margin-top: var(--space-xs);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--warning-soft);
+  color: var(--warning);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* top grid layout */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+/* history table */
+
+.history-card {
+  margin-bottom: var(--space-lg);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.history-table thead {
+  background: var(--surface-soft);
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.history-table th {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.history-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* responsive */
+
+@media (min-width: 48rem) {
+  .page-heading h1 {
+    font-size: 1.6rem;
+  }
+
+  .top-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  }
+
+  .prescriptions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .header-inner {
+    padding-block: var(--space-sm);
+  }
+
+  .page {
+    padding-block: var(--space-xl);
+  }
+
+  .card {
+    padding: var(--space-lg);
+  }
+
+  .history-card {
+    margin-bottom: var(--space-xl);
+  }
+}
